@@ -133,33 +133,6 @@ def saison_de_fete_detector():
 
 saison_de_fete_detector()
 
-
-
-
-
-
-
-def date_de_fête():
-    mois = int(input("Entrer votre mois de fête en nombre: "))
-    jour = int(input("Entrer votre jours de fête: "))
-    hémisphère = int(input("Entrer votre lieux de naissance: "))
-input()
-    jour_a = dt.datetime.today().day
-    mois_a = dt.datetime.today().month
-    
-    hémisphère == 'Hémisphère Nord':
-    print(mois)
-
-    if mois == Janvier, Février, Mars
-    print(Hiver)
-    else jour > 20 alors Été
-
-    if mois == Avril, Mai, Juin
-
-    if mois == Juillet, Aout, Septembre
-
-    if mois == octobre novembre décembre
-
 #Exercice 5
 
 #Créez une fonction demandant à un utilisateur un nombre pair et un nombre impair, une fonction permettant de vérifier que les nombres ne sont 
@@ -175,7 +148,7 @@ def modulo (nombre):
 def division_nb (div_nb):
     nb_pair, nb_impair = div_nb
     return nb_pair/nb_impair
-if nombre == 0
+if nombre == 0:
     print('Votre nombre impair est le x, votre nombre pair est le y et le résultat de leur division est égal à z.')
 else:
     nombre == cut
@@ -215,12 +188,12 @@ position = longitude, latitude
 dist = distance_pole_nord(position)
 print(dist)
 
-def coordonné_GPS(graphique)
-    while longitude > 1 , latitude = 0: 
-        print(E)
-        while longitude < 1 , latitude = 0: 
-        print(w)
-        while longitude = 0 , latitude > 1: 
-        print(N)
-        while longitude = 0 , latitude < 1: 
-        print(S)
+def coordonné_GPS(graphique):
+    while longitude > 1 : latitude = 0 
+    print(E)
+    while longitude < 1 : latitude = 0 
+    print(w)
+    while longitude = 0 : latitude > 1
+    print(N)
+    while longitude = 0 : latitude < 1 
+    print(S)
