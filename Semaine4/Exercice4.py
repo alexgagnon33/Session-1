@@ -318,29 +318,6 @@ def add_sub_div_2(reel_1, reel_2):
     
 print(add_sub_div_2(8.4, 6.33))
 
-#À NE PAS FAIRE
-num1 = 6.987
-num2 = 3.867
-#À NE PAS FAIRE
-def calcul():
-    add = num1 + num2
-    sous = num1 = num2
-    div = num1 / num2
-    print(f"addition: {add:.1f}, Soustraction: {sous:.2f}, Division: {div:.3f}")
-
-calcul()
-
-#MAIS
-
-def calcul(num1, num2):
-    add = num1 + num2
-    sous = num1 = num2
-    div = num1 / num2
-    print(f"addition: {add:.1f}, Soustraction: {sous:.2f}, Division: {div:.3f}")
-    
-num1 = 6.987
-num2 = 3.867
-
 #print(calculatrice(3.5, 4.6))
 
 # Exercice 5:
