@@ -57,10 +57,17 @@ def liste_element():
     print(nb_liste_surface)
     print(nb_liste_profonde)
 
-    liste_element()
 
 
 
-
-
+def suite_feb():
+    num = int(input("Entrer un numero"))
+    n1, n2 = 0, 1
+    sum = 0
+    for i in range (0, num):
+        print(sum, end=" ")
+        n1 = n2
+        n2 = sum
+        sum = n1 + n2
+suite_feb()
 
