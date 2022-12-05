@@ -35,11 +35,6 @@ def recupereinfoanimal():
     lieu_prefere = input("Entrer un lieu: ")
     infos_animal = nom_animal, couleur_animal, lieu_prefere
     return infos_animal
-#;gt >
-def formatageinfosanimal():
-    nom, couleur, lieu = recupererinfosanimal()
-    return f" J'ai trouvé un {nom} de couleur {couleur} dans mon lieu préféré: {lieu} "#.format()
-
 #2.1
 
 def user_infos_animal():
@@ -56,9 +51,6 @@ def formatage_infos_animal(infos):
 infos = user_infos_animal()
 infos_f = formatage_infos_animal(infos)
 print(infos_f)
-
-print(formatage_infos_animal(user_infos_animal()))
-print(formatageinfosanimal())
 
 #EXERCICE 3
 #jamais INT quand stream
@@ -82,10 +74,9 @@ def fete():
     mois = int(input("Entrer votre mois de fête en nombre(avril=4): "))
     jour = int(input("Entrer votre jours de fête: "))
 
-    jour_a = dt.datetime.today().day
-    mois_a = dt.datetime.today().month
+    jour_a = 8
+    mois_a = 10
 
-    
     if jour == jour_a and mois == mois_a:
         print("Bonne fête!")
     else:
@@ -148,11 +139,6 @@ def modulo (nombre):
 def division_nb (div_nb):
     nb_pair, nb_impair = div_nb
     return nb_pair/nb_impair
-if nombre == 0:
-    print('Votre nombre impair est le x, votre nombre pair est le y et le résultat de leur division est égal à z.')
-else:
-    nombre == cut
-    
 
 #Exercice 6
 #En partant de l'exercice du système de géolocation, modifiez votre code pour que les positions en DMS incluent la direction cardinale
@@ -187,13 +173,3 @@ position = longitude, latitude
 
 dist = distance_pole_nord(position)
 print(dist)
-
-def coordonné_GPS(graphique):
-    while longitude > 1 : latitude = 0 
-    print(E)
-    while longitude < 1 : latitude = 0 
-    print(w)
-    while longitude = 0 : latitude > 1
-    print(N)
-    while longitude = 0 : latitude < 1 
-    print(S)

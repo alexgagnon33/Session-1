@@ -250,12 +250,6 @@ print(modulo(nombres))
    
 #Exercice 9: (IF à apprendre)
 #Créer une fonction permettant de faire la puissance d'un nombre pour ensuite en faire la division. Votre fonction doit prendre de 1 à 3 paramètres, le premier paramètre étant la base, le deuxième paramètre étant l'exposant et le troisième paramètre étant la division. Si aucun exposant n'est donné, faites le carré. Si aucun diviseur n'est donné, n'effectuez pas de division.
-def fonc(nb1, nb2, nb3):
-    def puissance(n):
-        return n^n 
-    def division(n):
-        return puissance(n) / n 
-
 
 def fonction_x(base, exposant=2, diviseur=1):
     return base ** exposant / diviseur
