@@ -21,3 +21,41 @@ Partie 4:
 Offrir à l'utilisateur une nouvelle option au menu lui permettant d'ajouter un cours et un nom d'enseignant à la base de données de 
 la partie 2. Une fois les données utilisateurs entrées, ajouter les informations à la fin du document bdd.txt
 """
+
+def dictionnaire():
+    cours = {'Keven Presseau-St-Laurent' : 'Concepts de programmation',
+             'Keven Presseau-St-Laurent'  : 'Système exploitation',
+              'Prof Math' : 'Logique Mathématique'}
+
+def doc(menu):
+    with open('bdd.txt', 'w', encoding='UTF-8') as f:
+        f.write(f'{menu} \n')
+
+def menuoui():
+    sortie = False
+    while not sortie:
+        menu={1 : 'Concepts de programmation', 
+              2 : 'Logique Mathématique',
+              3 : 'Système exploitation',
+              4 : 'Sortie'}
+        print(menu)
+        for num, option in menu.items():
+            print(f'{num}-{option}')
+        choix = int(input("Option choisie: "))
+        print(choix)
+        match choix:
+            case 1:
+                print('Keven Presseau-St-Laurent' : 'Concepts de programmation')
+                doc(menu)
+            case 2:
+                print('Keven Presseau-St-Laurent'  : 'Système exploitation')
+                doc(menu)
+            case 3:
+                print('Prof Math' : 'Logique Mathématique')
+                doc(menu)
+            case 4:
+                sortie = True
+            case 5:
+                #Permettre utilisateur d'écrire le om d'un prof et montrer lees cours qu'ils enseignent
+
+
