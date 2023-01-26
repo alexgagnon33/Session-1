@@ -1,36 +1,28 @@
 #Partie 1
 def calculatrice_etape1():
 
-    Fraction1Num = print(int(input("Entrer le numérateur de la première fraction: ")))
-    Fraction1Dén = print(int(input("Entrer le dénominateur de la première fraction: ")))
-    Fraction2Num = print(int(input("Entrer le numérateur de la deuxième fraction: ")))
-    Fraction2Dén = print(int(input("Entrer le dénominateur de la deuxième fraction: ")))
+    Fraction1Num = int(input("Entrer le numérateur de la première fraction: "))
+    Fraction1Dén = int(input("Entrer le dénominateur de la première fraction: "))
+    Fraction2Num = int(input("Entrer le numérateur de la deuxième fraction: "))
+    Fraction2Dén = int(input("Entrer le dénominateur de la deuxième fraction: "))
 
-    Num_Addition = (Fraction1Num * Fraction2Dén) + (Fraction2Dén * Fraction2Num)
+    Num_Addition = (Fraction1Num * Fraction2Dén) + (Fraction1Dén * Fraction2Num)
     Dén_Addition = (Fraction1Dén * Fraction2Dén)
 
-    Num_Soustraction = (Fraction1Num * Fraction2Dén) + (Fraction2Dén * Fraction2Num)
+    Num_Soustraction = (Fraction1Num * Fraction2Dén) - (Fraction1Dén * Fraction2Num)
     Dén_Soustraction = (Fraction1Dén * Fraction2Dén)
 
     Num_Multiplication = (Fraction1Num * Fraction2Num) 
     Dén_Multiplication = (Fraction1Dén * Fraction2Dén)
 
     Num_Division = (Fraction1Num * Fraction2Dén) 
-    Dén_Division = (Fraction1Dén * Fraction2Dén)
+    Dén_Division = (Fraction1Dén * Fraction2Num)
     
-    print(Num_Addition)
-    print(Dén_Addition)
+    print("Addition: ", Num_Addition, "/", Dén_Addition)
+    print("Soustraction: ", Num_Soustraction, "/", Dén_Soustraction)
+    print("Multiplication: ", Num_Multiplication, "/", Dén_Multiplication)
+    print("Division: ", Num_Division, "/", Dén_Division)
 
-    print(Num_Soustraction)
-    print(Dén_Soustraction)
-
-    print(Num_Multiplication)
-    print(Dén_Multiplication)
-
-    print(Num_Division)
-    print(Dén_Division)
-
-calculatrice_etape1()
 
 #Partie 2
 def addition(fraction1, fraction2):
