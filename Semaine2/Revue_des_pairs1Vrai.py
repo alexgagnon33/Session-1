@@ -27,31 +27,50 @@ calculatrice_etape1()
 
 #Partie 2
 def addition(fraction1, fraction2):
-    a, b = fraction1
-    c, d = fraction2
-    numerateur = (a * d) + (b * c)
-    denominateur = b * d
-    return (numerateur, denominateur)
+        a, b = fraction1
+        c, d = fraction2
+        Num = (a * d) + (b * c)
+        Dén = b * d
+        return (Num, Dén)
 
 def soustraction(fraction1, fraction2):
-    a, b = fraction1
-    c, d = fraction2
-    numerateur = (a * d) - (b * c)
-    denominateur = b * d
-    return (numerateur, denominateur)
+        a, b = fraction1
+        c, d = fraction2
+        Num = (a * d) - (b * c)
+        Dén = b * d
+        return (Num, Dén)
 
 def multiplication(fraction1, fraction2):
-    a, b = fraction1
-    c, d = fraction2
-    numerateur = a * c
-    denominateur = b * d
-    return (numerateur, denominateur)
+        a, b = fraction1
+        c, d = fraction2
+        Num = a * c
+        Dén = b * d
+        return (Num, Dén)
 
 def division(fraction1, fraction2):
-    a, b = fraction1
-    c, d = fraction2
-    numerateur = a * d
-    denominateur = b * c
-    return (numerateur, denominateur)
+        a, b = fraction1
+        c, d = fraction2
+        Num = a * d
+        Dén = b * c
+        return (Num, Dén)
+
+fraction1 = (1, 2)
+fraction2 = (3, 4)
+
+addition(fraction1, fraction2)
+soustraction(fraction1, fraction2)
+multiplication(fraction1, fraction2)
+division(fraction1, fraction2)
 
 #Partie3
+
+def float(fraction):
+    numerateur, denominateur = fraction
+    return numerateur / denominateur
+
+fraction1 = (1, 2)
+fraction2 = (3, 4)
+result = addition(fraction1, fraction2)
+print(float(result))
+
+float()
