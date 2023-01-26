@@ -21,9 +21,9 @@ def calculatrice_etape1():
     Fraction2Num = print(int(input("Entrer le numérateur de la deuxième fraction: ")))
     Fraction2Dén = print(int(input("Entrer le dénominateur de la deuxième fraction: ")))
 
-    Addition = Fraction1Num / Fraction1Dén + Fraction2Num / Fraction2Dén
-    Soustraction = Fraction1Num / Fraction2Dén - Fraction2Num / Fraction2Dén
-    Multiplication = Fraction1Num / Fraction2Dén * Fraction2Num / Fraction2Dén
+    Addition = (Fraction1Num / Fraction1Dén) + (Fraction2Num / Fraction2Dén)
+    Soustraction = (Fraction1Num / Fraction2Dén) - (Fraction2Num / Fraction2Dén)
+    Multiplication = (Fraction1Num / Fraction2Dén) * (Fraction2Num / Fraction2Dén)
     Division = (Fraction1Num / Fraction2Dén) / (Fraction2Num / Fraction2Dén)
     print(Addition, Soustraction, Multiplication, Division)
 
