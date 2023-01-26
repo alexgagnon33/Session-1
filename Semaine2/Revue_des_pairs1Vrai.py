@@ -22,7 +22,8 @@ def calculatrice_etape1():
     print("Soustraction: ", Num_Soustraction, "/", Dén_Soustraction)
     print("Multiplication: ", Num_Multiplication, "/", Dén_Multiplication)
     print("Division: ", Num_Division, "/", Dén_Division)
-
+    
+calculatrice_etape1()
 
 #Partie 2
 def addition(fraction1, fraction2):
