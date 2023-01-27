@@ -1,12 +1,10 @@
-
+#Revue des pairs3
 
 nom_fichier = input("Écrivez le nom du fichier: ")
 fichier = open(nom_fichier, "w")
 
 
-
 nombres = []
-
 
 
 while True:
@@ -16,9 +14,7 @@ while True:
     nombres.append(n)
 
 
-
 nombres.sort()
-
 
 
 for i in range(len(nombres)):
@@ -59,14 +55,20 @@ print(maximum1)
 
 nombres_intégré = nombres
 
+
+
 def moyenne(nombres_intégré):
     total = 0
     for num in nombres_intégré:
         total += num
     return total/len(nombres_intégré)
 
+
+
 result_moyenne = moyenne(nombres_intégré)
 print("Voici la moyenne : " , result_moyenne)
+
+
 
 def mediane(nombres_intégré):
     if len(nombres_intégré) % 2 == 0:
@@ -80,6 +82,8 @@ def mediane(nombres_intégré):
 resultat_mediane = mediane(nombres_intégré)
 print("Voici la moyenne : " , resultat_mediane)
 
+
+ 
 def mode(nombres_intégré):
     counts = {}
     for num in nombres_intégré:
@@ -96,5 +100,3 @@ def mode(nombres_intégré):
 
 result_mode = mode(nombres_intégré)
 print("Voici la moyenne : " , result_mode)
-
-
