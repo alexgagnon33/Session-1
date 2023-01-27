@@ -46,11 +46,12 @@ for i in nombres:
 print(maximum)
 
 #Moyenne
-def find_mean(nombres):
+def find_mean(Nombre_Math):
     total = 0
     for num in nombres:
         total += num
-    return total/len(nombres)
+    return total/len(Nombre_Math)
+Nombre_Math = nombres
 
 #Médiane
 def find_median(nombres):
@@ -62,12 +63,12 @@ def find_median(nombres):
         median = nombres[middle]
     return median
 
-find_median(nombres)
+find_median(Nombre_Math)
 
 #Mode
-def find_mode(nombres):
+def find_mode(Nombre_Math):
     counts = {}
-    for num in nombres:
+    for num in Nombre_Math:
         if num in counts:
             counts[num] += 1
         else:
