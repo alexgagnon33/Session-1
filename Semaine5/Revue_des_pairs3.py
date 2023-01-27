@@ -57,30 +57,32 @@ for i in nombres:
         maximum1 = i
 print(maximum1)
 
+nombres_intégré = nombres
 
-
-def moyenne(nombres):
+def moyenne(nombres_intégré):
     total = 0
-    for num in nombres:
+    for num in nombres_intégré:
         total += num
-    return total/len(nombres)
+    return total/len(nombres_intégré)
 
-print(moyenne)
+result_moyenne = moyenne(nombres_intégré)
+print("Voici la moyenne : " , result_moyenne)
 
-def mediane(nombres):
-    if len(nombres) % 2 == 0:
-        middle = len(nombres) / 2
-        median = (nombres[middle - 1] + nombres[middle]) / 2
+def mediane(nombres_intégré):
+    if len(nombres_intégré) % 2 == 0:
+        middle = len(nombres_intégré) / 2
+        median = (nombres_intégré[middle - 1] + nombres_intégré[middle]) / 2
     else:
-        middle = len(nombres) // 2
-        median = nombres[middle]
+        middle = len(nombres_intégré) // 2
+        median = nombres_intégré[middle]
     return median
 
-mediane(nombres)
+resultat_mediane = mediane(nombres_intégré)
+print("Voici la moyenne : " , resultat_mediane)
 
-def mode(nombres):
+def mode(nombres_intégré):
     counts = {}
-    for num in nombres:
+    for num in nombres_intégré:
         if num in counts:
             counts[num] += 1
         else:
@@ -92,6 +94,7 @@ def mode(nombres):
         mode = [k for k, v in counts.items() if v == max_count]
         return mode
 
-mode(nombres)
+result_mode = mode(nombres_intégré)
+print("Voici la moyenne : " , result_mode)
 
 
