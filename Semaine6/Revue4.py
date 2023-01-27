@@ -2,7 +2,7 @@
 
 courses = {}
 
-with open("Semaine6\Prof.txt", "r", encoding="UTF-8") as prof_file:
+with open("Prof.txt", "r", encoding="UTF-8") as prof_file:
     lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
@@ -24,12 +24,14 @@ while True:
         for i, course in enumerate(courses.keys()):
             print(f"{i+1}. {course}")
 
-        selected_course = int(input())
+            selected_course = int(input())
 
-        course_name = list(courses.keys())[selected_course - 1]
-        teacher_name = courses[course_name]
-        print(f"Enseignant: {teacher_name}\nCours: {course_name}")
-
+        if selected_course > 0 and selected_course <= len(courses.keys()):
+            course_name = list(courses.keys())[selected_course - 1]
+            teacher_name = courses[course_name]
+            print(f"Enseignant: {teacher_name}\nCours: {course_name}")
+        else:
+            print("Sélection non valide. Veuillez sélectionner une option valide.")
 
     elif choice == 2:
         teacher_name = input("Entrez le nom de l'enseignant à rechercher: ")
@@ -47,7 +49,7 @@ while True:
         teacher_name = input("Entrez le nom de l'enseignant: ")
         courses[course_name] = teacher_name
 
-        
+
     elif choice == 4:
         break
     else:
