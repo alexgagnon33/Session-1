@@ -8,7 +8,8 @@ while True:
     print("Sélectionnez une option:")
     print("1. Sélectionnez un cours")
     print("2. Recherchez un enseignant")
-    print("3. Quitter")
+    print("3. Ajouter un cours et un enseignant")
+    print("4. Quitter")
     choix = int(input())
     if choix == 1:
         print("Sélectionnez un cours:")
