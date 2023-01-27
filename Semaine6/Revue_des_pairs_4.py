@@ -25,8 +25,8 @@ la partie 2. Une fois les données utilisateurs entrées, ajouter les informatio
 
 courses = {
     "Concepts de programmation 1": "Keven Presseau-St-Laurent",
-    "Algorithmique avancée": "Jean-Francois Tremblay",
-    "Architecture des ordinateurs": "Martin Dupont"
+    "Systèmes d'exploitation": "Keven Presseau-St-Laurent",
+    "Logique mathématique pour les professionnelles": "Nicolas Thavonekham Robidoux"
 }
 
 print("Sélectionnez un cours:")
@@ -41,8 +41,8 @@ print(f"Enseignant: {teacher_name}\nCours: {course_name}")
 
 
 courses = {}
-with open("bdd.txt", "r") as bdd_file:
-    lines = bdd_file.readlines()
+with open("Prof.txt", "r") as prof_file:
+    lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
         teacher_name = lines[i+1].strip()
@@ -60,8 +60,8 @@ print(f"Enseignant: {teacher_name}\nCours: {course_name}")
 
 
 courses = {}
-with open("bdd.txt", "r") as bdd_file:
-    lines = bdd_file.readlines()
+with open("Prof.txt", "r") as prof_file:
+    lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
         teacher_name = lines[i+1].strip()
@@ -101,8 +101,8 @@ while True:
 
 
 courses = {}
-with open("bdd.txt", "r") as bdd_file:
-    lines = bdd_file.readlines()
+with open("Prof.txt", "r") as prof_file:
+    lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
         teacher_name = lines[i+1].strip()
@@ -140,8 +140,8 @@ while True:
         course_name = input("Entrez le nom du cours: ")
         teacher_name = input("Entrez le nom de l'enseignant: ")
         courses[course_name] = teacher_name
-        with open("bdd.txt", "a") as bdd_file:
-            bdd_file.write(f"{course_name}\n{teacher_name}\n")
+        with open("bdd.txt", "a") as prof_file:
+            prof_file.write(f"{course_name}\n{teacher_name}\n")
         print(f"Le cours {course_name} enseigné par {teacher_name} a été ajouté à la base de données.")
             
     elif choice == 4:
