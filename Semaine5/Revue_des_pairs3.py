@@ -65,7 +65,7 @@ def moyenne(nombres):
         total += num
     return total/len(nombres)
 
-moyenne(nombres)
+print(moyenne)
 
 def mediane(nombres):
     if len(nombres) % 2 == 0:
