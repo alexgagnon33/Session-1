@@ -5,3 +5,4 @@ Keven Presseau-St-Laurent
 Logique mathématique pour les professionnels de l'informatique
 Nicolas Thavonekham Robidoux
 
+{'CP1': 'Keven Presseau-St-Laurent', 'CP2': 'John Doe', 'CP3': 'Jane Smith', 'lol': 'lala'}
