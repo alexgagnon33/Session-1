@@ -74,12 +74,3 @@ def menu():
     else:
         print("Invalid input")
 
-
-fraction1 = Fraction(1, 2)
-fraction2 = Fraction(2, 3)
-print(fraction1 + fraction2) # 3/6
-print(fraction1 - fraction2) # -1/6
-print(fraction1 == fraction2) # False
-print(fraction1 * fraction2) # 2/6
-print(fraction1 / fraction2) # 3/4
-print(fraction1 ** 0.5) #0.7071067811865475
