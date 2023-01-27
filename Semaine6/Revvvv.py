@@ -14,20 +14,20 @@ while True:
         print("Sélectionnez un cours:")
         for i, c in enumerate(cours):
             print(f"{i + 1}. {c}")
-            cours_choix = int(input())
-            nom_cours = list(cours.keys())[cours_choix - 1]
-            nom_enseignant = cours[nom_cours]
-            print(f"L'enseignant pour {nom_cours} est {nom_enseignant}.")
+        cours_choix = int(input())
+        nom_cours = list(cours.keys())[cours_choix - 1]
+        nom_enseignant = cours[nom_cours]
+        print(f"L'enseignant pour {nom_cours} est {nom_enseignant}.")
     elif choix == 2:
         print("Sélectionnez un enseignant:")
         for i, e in enumerate(cours.values()):
             print(f"{i + 1}. {e}")
-            enseignant_choix = int(input())
-            nom_enseignant = list(cours.values())[enseignant_choix - 1]
-            for c, e in cours.items():
-                if e == nom_enseignant:
-                    nom_cours = c
-                    break
+        enseignant_choix = input()
+        for c, e in cours.items():
+            if e == enseignant_choix:
+                nom_cours = c
+                nom_enseignant = e
+                break
         print(f"L'enseignant {nom_enseignant} enseigne le cours {nom_cours}.")
     elif choix == 3:
         break
