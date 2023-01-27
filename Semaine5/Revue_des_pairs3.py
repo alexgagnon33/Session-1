@@ -11,7 +11,6 @@ while True:
 
 nombres.sort()
 
-#Décroissant
 for i in range(len(nombres)):
     max_index = i
     for j in range(i + 1, len(nombres)):
@@ -21,7 +20,6 @@ for i in range(len(nombres)):
 
 print(nombres)
 
-#Croissant
 for i in range(len(nombres)):
     min_index = i
     for j in range(i + 1, len(nombres)):
@@ -31,29 +29,31 @@ for i in range(len(nombres)):
 
 print(nombres)
 
-#Minimum
-minimum = nombres[0]
-for i in nombres:
-    if i < minimum:
-        minimum = i
+def minimum(nombres):
+    minimum1 = nombres[0]
+    for i in nombres:
+        if i < minimum1:
+            minimum1 = i
+resultat_minimum = minimum()
 print("Voici le minimum : ", (minimum))
 
-#Maximum
-maximum = nombres[0]
-for i in nombres:
-    if i > maximum:
-        maximum = i
+def maximum(nombres):
+    maximum1 = nombres[0]
+    for i in nombres:
+        if i > maximum1:
+            maximum1 = i
+resultat_maximum = maximum()
 print("Voici le maximum : ", (maximum))
 
-#Moyenne
+
 def moyenne(nombres):
     total = 0
     for num in nombres:
         total += num
     return total/len(nombres)
+resultat_moyenne = moyenne()
+print("Voici la moyenne : ", resultat_moyenne)
 
-print("Voici la moyenne : ", (moyenne))
-#Médiane
 def mediane(nombres):
     if len(nombres) % 2 == 0:
         middle = len(nombres) / 2
@@ -62,9 +62,9 @@ def mediane(nombres):
         middle = len(nombres) // 2
         median = nombres[middle]
     return median
+resultat_mediane = mediane()
+print("Voici la mediane : ", resultat_mediane)
 
-print("Voici la mediane : ", (mediane))
-#Mode
 def mode(nombres):
     counts = {}
     for num in nombres:
@@ -78,5 +78,7 @@ def mode(nombres):
     else:
         mode = [k for k, v in counts.items() if v == max_count]
         return mode
+resultat_mode = mode()
+print("Voici le mode : ", resultat_mode)
 
-print("Voici le mode : ", (mode))
+
