@@ -59,11 +59,10 @@ def find_median(nombres):
         median = (nombres[middle - 1] + nombres[middle]) / 2
     else:
         middle = len(nombres) // 2
-        median = lst[middle]
+        median = nombres[middle]
     return median
 
-lst = nombres
-find_median(lst)
+find_median(nombres)
 
 #Mode
 def find_mode(nombres):
