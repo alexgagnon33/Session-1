@@ -9,8 +9,6 @@ while True:
     print("1. Sélectionnez un cours")
     print("2. Recherchez un enseignant")
     print("3. Quitter")
-
-
     choix = int(input())
     if choix == 1:
         print("Sélectionnez un cours:")
@@ -26,10 +24,10 @@ while True:
             print(f"{i + 1}. {e}")
             enseignant_choix = int(input())
             nom_enseignant = list(cours.values())[enseignant_choix - 1]
-        for c, e in cours.items():
-            if e == nom_enseignant:
-                nom_cours = c
-                break
+            for c, e in cours.items():
+                if e == nom_enseignant:
+                    nom_cours = c
+                    break
         print(f"L'enseignant {nom_enseignant} enseigne le cours {nom_cours}.")
     elif choix == 3:
         break
