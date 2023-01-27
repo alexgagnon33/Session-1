@@ -48,19 +48,19 @@ print(maximum)
 #Moyenne
 def find_mean(Nombre_Math):
     total = 0
-    for num in nombres:
+    for num in Nombre_Math:
         total += num
     return total/len(Nombre_Math)
 Nombre_Math = nombres
 
 #Médiane
-def find_median(nombres):
-    if len(nombres) % 2 == 0:
-        middle = len(nombres) / 2
-        median = (nombres[middle - 1] + nombres[middle]) / 2
+def find_median(Nombre_Math):
+    if len(Nombre_Math) % 2 == 0:
+        middle = len(Nombre_Math) / 2
+        median = (Nombre_Math[middle - 1] + Nombre_Math[middle]) / 2
     else:
-        middle = len(nombres) // 2
-        median = nombres[middle]
+        middle = len(Nombre_Math) // 2
+        median = Nombre_Math[middle]
     return median
 
 find_median(Nombre_Math)
