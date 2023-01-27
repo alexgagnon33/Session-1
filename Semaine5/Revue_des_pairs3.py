@@ -46,29 +46,28 @@ for i in nombres:
 print("Voici le maximum : ", (maximum))
 
 #Moyenne
-def moyenne(Nombre_Math):
+def moyenne(nombres):
     total = 0
-    for num in Nombre_Math:
+    for num in nombres:
         total += num
-    return total/len(Nombre_Math)
-Nombre_Math = nombres
+    return total/len(nombres)
+
 print("Voici la moyenne : ", (moyenne))
 #Médiane
-def mediane(Nombre_Math):
-    if len(Nombre_Math) % 2 == 0:
-        middle = len(Nombre_Math) / 2
-        median = (Nombre_Math[middle - 1] + Nombre_Math[middle]) / 2
+def mediane(nombres):
+    if len(nombres) % 2 == 0:
+        middle = len(nombres) / 2
+        median = (nombres[middle - 1] + nombres[middle]) / 2
     else:
-        middle = len(Nombre_Math) // 2
-        median = Nombre_Math[middle]
+        middle = len(nombres) // 2
+        median = nombres[middle]
     return median
 
-mediane(Nombre_Math)
 print("Voici la mediane : ", (mediane))
 #Mode
-def mode(Nombre_Math):
+def mode(nombres):
     counts = {}
-    for num in Nombre_Math:
+    for num in nombres:
         if num in counts:
             counts[num] += 1
         else:
