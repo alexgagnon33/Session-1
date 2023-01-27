@@ -35,7 +35,7 @@ def minimum(nombres):
         if i < minimum1:
             minimum1 = i
 
-print(minimum(nombres))
+minimum(nombres)
 
 def maximum(nombres):
     maximum1 = nombres[0]
@@ -43,7 +43,7 @@ def maximum(nombres):
         if i > maximum1:
             maximum1 = i
 
-print(maximum(nombres))
+maximum(nombres)
 
 
 def moyenne(nombres):
@@ -52,7 +52,7 @@ def moyenne(nombres):
         total += num
     return total/len(nombres)
 
-print(moyenne(nombres))
+moyenne(nombres)
 
 def mediane(nombres):
     if len(nombres) % 2 == 0:
@@ -63,7 +63,7 @@ def mediane(nombres):
         median = nombres[middle]
     return median
 
-print(mediane(nombres))
+mediane(nombres)
 
 def mode(nombres):
     counts = {}
@@ -79,6 +79,6 @@ def mode(nombres):
         mode = [k for k, v in counts.items() if v == max_count]
         return mode
 
-print(mode(nombres))
+mode(nombres)
 
 
