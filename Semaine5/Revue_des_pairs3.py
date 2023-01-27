@@ -1,15 +1,25 @@
+
+
 nom_fichier = input("Écrivez le nom du fichier: ")
 fichier = open(nom_fichier, "w")
 
+
+
 nombres = []
 
+
+
 while True:
-    n = float(input("Entrez un nombre positif (entrer un nombre négatif pour arrêter): "))
+    n = float(input("Entrez un nombre positif puis un nombre négatif pour break la liste): "))
     if n < 0:
         break
     nombres.append(n)
 
+
+
 nombres.sort()
+
+
 
 for i in range(len(nombres)):
     max_index = i
@@ -20,6 +30,8 @@ for i in range(len(nombres)):
 
 print(nombres)
 
+
+
 for i in range(len(nombres)):
     min_index = i
     for j in range(i + 1, len(nombres)):
@@ -29,21 +41,22 @@ for i in range(len(nombres)):
 
 print(nombres)
 
-def minimum(nombres):
-    minimum1 = nombres[0]
-    for i in nombres:
-        if i < minimum1:
-            minimum1 = i
 
-minimum(nombres)
 
-def maximum(nombres):
-    maximum1 = nombres[0]
-    for i in nombres:
-        if i > maximum1:
-            maximum1 = i
+minimum1 = nombres[0]
+for i in nombres:
+    if i < minimum1:
+        minimum1 = i
+print(minimum1)
 
-maximum(nombres)
+
+
+maximum1 = nombres[0]
+for i in nombres:
+    if i > maximum1:
+        maximum1 = i
+print(maximum1)
+
 
 
 def moyenne(nombres):
