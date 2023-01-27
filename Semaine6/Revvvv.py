@@ -35,7 +35,7 @@ while True:
         nom_enseignant = input("Entrez le nom de l'enseignant: ")
         cours[nom_cours] = nom_enseignant
         print("Cours et enseignant ajoutés.")
-        with open("Revue4\pomme.txt", "w", encoding="UTF-8") as file:
+        with open("Revue4\pomme.txt", "a", encoding="UTF-8") as file:
             file.write(str(cours))
     elif choix == 4:
         break
