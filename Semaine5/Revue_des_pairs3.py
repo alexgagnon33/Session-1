@@ -70,7 +70,7 @@ print("Voici la moyenne : " , result_moyenne)
 
 def mediane(nombres_intégré):
     if len(nombres_intégré) % 2 == 0:
-        middle = len(nombres_intégré) / 2
+        middle = len(nombres_intégré) // 2
         median = (nombres_intégré[middle - 1] + nombres_intégré[middle]) / 2
     else:
         middle = len(nombres_intégré) // 2
