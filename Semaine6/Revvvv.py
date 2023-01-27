@@ -1,23 +1,15 @@
-courses = {"Concepts de programmation 1": "Keven Presseau-St-Laurent",
-"Systèmes d'exploitation": "Keven Presseau-St-Laurent",
-"Logique mathématique pour les professionnelles": "Nicolas Thavonekham Robidoux"}
+cours = {
+    "CP1": "Keven Presseau-St-Laurent",
+    "CP2": "John Doe",
+    "CP3": "Jane Smith"
+}
 
-while True:
-    print("1. Sélectionner un cours")
-    print("2. Rechercher un enseignant")
-    print("3. Ajouter un cours")
-    print("4. Quitter")
-    choice = int(input())
+print("Sélectionnez un cours:")
+for i, c in enumerate(cours):
+    print(f"{i + 1}. {c}")
 
-    if choice == 1:
-        print("Sélectionnez un cours:")
-        for i, course in enumerate(courses.keys()):
-            print(f"{i+1}. {course}")
+choix = int(input())
+nom_cours = list(cours.keys())[choix - 1]
+nom_enseignant = cours[nom_cours]
 
-        selected_course = int(input())
-        if selected_course > 0 and selected_course <= len(courses.keys()):
-            course_name = list(courses.keys())[selected_course - 1]
-            teacher_name = courses[course_name]
-            print(f"{course_name} - {teacher_name}")
-        else:
-            print("Sélection non valide. Veuillez sélectionner une option valide.")
+print(f"L'enseignant pour {nom_cours} est {nom_enseignant}.")
