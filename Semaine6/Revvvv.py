@@ -30,6 +30,13 @@ while True:
                 break
         print(f"L'enseignant {nom_enseignant} enseigne le cours {nom_cours}.")
     elif choix == 3:
+        nom_cours = input("Entrez le nom du cours: ")
+        nom_enseignant = input("Entrez le nom de l'enseignant: ")
+        cours[nom_cours] = nom_enseignant
+        print("Cours et enseignant ajoutés.")
+        with open("Revue4\pomme.txt", "w", encoding="UTF-8") as file:
+            file.write(str(cours))
+    elif choix == 4:
         break
     else:
         print("Choix non valide, veuillez réessayer.")
