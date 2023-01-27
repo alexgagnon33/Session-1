@@ -1,97 +1,81 @@
-#créer un fichier/le nommer
-#nb rdm dans le fichier seulement positif
-#puis suivre les règles
+nom_fichier = input("Écrivez le nom du fichier: ")
+fichier = open(nom_fichier, "w")
 
-def document_nb():
-    nom_fichier = int(input('Écriver le nom du document'))
-    nb_choisi = int(input('Écriver des nombres a inclure dans le document'))
-    nb_croissant = sorted(nb_choisi) 
-    nb_decroissant = nb_choisi.sort (Fasle=True)
-    nb_max = max(nb_choisi)
-    nb_min = min(nb_choisi)
-    nb_moy = sum(nb_choisi)/len(nb_choisi)
-    nb_med = dsdsds
-    nb_mode = 
-if nb_choisi >= 0:
+nombres = []
 
+while True:
+    n = float(input("Entrez un nombre positif (entrer un nombre négatif pour arrêter): "))
+    if n < 0:
+        break
+    nombres.append(n)
 
+nombres.sort()
 
-def doc_nb():
-    nom_fichier = int(input('Écriver le nom du document'))
-    nb_choisi = int(input('Écriver des nombres a inclure dans le document'))
-    document = {
-    'nb_croissant' : nb_choisi.sort() 
-    'nb_decroissant' : nb_choisi.sort (Fasle=True)
-}
+#Décroissant
+for i in range(len(nombres)):
+    max_index = i
+    for j in range(i + 1, len(nombres)):
+        if nombres[j] > nombres[max_index]:
+            max_index = j
+    nombres[i], nombres[max_index] = nombres[max_index], nombres[i]
 
+print(nombres)
 
+#Croissant
+for i in range(len(nombres)):
+    min_index = i
+    for j in range(i + 1, len(nombres)):
+        if nombres[j] < nombres[min_index]:
+            min_index = j
+    nombres[i], nombres[min_index] = nombres[min_index], nombres[i]
 
+print(nombres)
 
+#Minimum
+minimum = nombres[0]
+for i in nombres:
+    if i < minimum:
+        minimum = i
+print(minimum)
 
+#Maximum
+maximum = nombres[0]
+for i in nombres:
+    if i > maximum:
+        maximum = i
+print(maximum)
 
-def doc_nb():
-    nom_fichier = int(input('Écriver le nom du document'))
-    nb_choisi = int(input('Écriver des nombres a inclure dans le document'))
-    nb_croissant = nb_choisi.sort() 
-    nb_decroissant = nb_choisi.sort (Fasle=True)
-    nb_max = max(nb_choisi)
-    nb_min = min(nb_choisi)
-    nb_moy = sum(nb_choisi)/len(nb_choisi)
-def median(l):
-    half = len(l) // 2
-    l.sort()
-    if not len(l) % 2:
-        return (l[half - 1] + l[half]) / 2.0
-    return l[half]
-if nb_choisi >= 0:
-    with open('{nom_fichier}.txt', 'x') as f:
-        f.write{nb_croissant}
-else:
-    print('Vos nombres choisi sont négatif')
+#Moyenne
+def find_mean(nombres):
+    total = 0
+    for num in nombres:
+        total += num
+    return total/len(nombres)
 
+#Médiane
+def find_median(nombres):
+    if len(nombres) % 2 == 0:
+        middle = len(nombres) / 2
+        median = (nombres[middle - 1] + nombres[middle]) / 2
+    else:
+        middle = len(nombres) // 2
+        median = lst[middle]
+    return median
 
+lst = nombres
+find_median(lst)
 
-
-def document():
-    nb_document = int(input('Écriver les nombre que vous voulez écrire dans le document avec un espace'))
-    print("\n")
-    user_list = nb_document.split()
-    print('list: ', user_list)
-    for i in range(len(user_list)):
-        user_list[i] = int(user_list[i])
-
-#Donc doit définir et faire des boucles pour trouver tous les éléments de la liste
-#puis return à la fin de la boucle
-
-def plus_petit(données )
-
-def ordre_croissant(données):
-    triés = [données]
-    while len (données) > 0:
-    min = plus_petit(données)
-    données.remove(min)
-    données.append(min)
-
-    for in 
-    
-"""
-Exercice 5 Revue des pairs:
-Offrir à l'utilisateur d'entrer un nom de fichier et un nombre illimité de nombres positifs, tant et aussi longtemps qu'il ne rentre 
-pas un nombre négatif. Ajouter les nombres entrés par l'utilisateur à une liste en excluant le nombre négatif. Ensuite, écrire les résultats
-suivants dans le fichier nommé par l'utilisateur:
-
-La liste en ordre croissant
-La liste en ordre décroissant
-Le maximum
-Le minimum
-La moyenne de la liste
-La médiane (la valeur à la position centrale si la longueur de la liste est impaire et la moyenne des deux valeurs centrales si paire)
-Ex: 1, 2, 3, 5, 4. Médiane = 3.
-Ex: 1, 2, 3, 4, 5, 6. Médiane = 3.5
-Le mode (l'occurrence la plus fréquente s'il y a lieu. Si chaque entrée est unique, inscrire que le mode = none)
-Ex: 1, 2, 2, 2, 3, 4, 3, 4. La mode = 2
-
-Vous ne pouvez pas utiliser de module, vous devez donc vous-même implémenter l'algorithme pour trier une liste en ordre croissant, trier une 
-liste en ordre décroissant, trouver le maximum, trouver le minimum, calculer la moyenne, trouver la médiane, et trouver le mode
-(utilisez un dictionnaire pour chaque donnée en tant que clef, affectez 0 comme valeur initiale et incrémentez de 1 à chaque répétition).
-"""
+#Mode
+def find_mode(nombres):
+    counts = {}
+    for num in nombres:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+    max_count = max(counts.values())
+    if max_count == 1:
+        return None
+    else:
+        mode = [k for k, v in counts.items() if v == max_count]
+        return mode
