@@ -41,7 +41,7 @@ print(f"Enseignant: {teacher_name}\nCours: {course_name}")
 
 
 courses = {}
-with open("Prof.txt", "r") as prof_file:
+with open(f"Semaine6\\Prof.txt", "r", encoding="UTF-8") as prof_file:
     lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
@@ -60,7 +60,7 @@ print(f"Enseignant: {teacher_name}\nCours: {course_name}")
 
 
 courses = {}
-with open("Prof.txt", "r") as prof_file:
+with open(f"Semaine6\\Prof.txt", "r", encoding="UTF-8") as prof_file:
     lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
@@ -101,7 +101,7 @@ while True:
 
 
 courses = {}
-with open("Prof.txt", "r") as prof_file:
+with open(f"Semaine6\\Prof.txt", "r", encoding="UTF-8") as prof_file:
     lines = prof_file.readlines()
     for i in range(0, len(lines), 2):
         course_name = lines[i].strip()
