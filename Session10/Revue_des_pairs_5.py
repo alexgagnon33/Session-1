@@ -74,3 +74,4 @@ def menu():
     else:
         print("Invalid input")
 
+menu()
