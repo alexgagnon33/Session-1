@@ -28,6 +28,9 @@ while True:
             course_name = list(courses.keys())[selected_course - 1]
             teacher_name = courses[course_name]
             print(f"Enseignant: {teacher_name}\nCours: {course_name}")
+            for key, value in courses.items():
+                if value == teacher_name:
+                 print(f"Enseignant: {value}\nCours: {key}")
         else:
             print("Sélection non valide. Veuillez sélectionner une option valide.")
 
