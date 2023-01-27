@@ -18,14 +18,12 @@ while True:
     print("4. Quitter")
     choice = int(input())
 
-
     if choice == 1:
         print("Sélectionnez un cours:")
         for i, course in enumerate(courses.keys()):
             print(f"{i+1}. {course}")
 
-            selected_course = int(input())
-
+        selected_course = int(input())
         if selected_course > 0 and selected_course <= len(courses.keys()):
             course_name = list(courses.keys())[selected_course - 1]
             teacher_name = courses[course_name]
@@ -36,19 +34,17 @@ while True:
     elif choice == 2:
         teacher_name = input("Entrez le nom de l'enseignant à rechercher: ")
         found = False
-    for course, teacher in courses.items():
-        if teacher.lower() == teacher_name.lower():
-            print(f"{teacher} enseigne le cours {course}")
-            found = True
-    if not found:
-        print(f"Aucun cours enseigné par {teacher_name} n'a été trouvé.")
-    
+        for course, teacher in courses.items():
+            if teacher.lower() == teacher_name.lower():
+                print(f"{teacher} enseigne le cours {course}")
+                found = True
+        if not found:
+            print(f"Aucun cours enseigné par {teacher_name} n'a été trouvé.")
 
     elif choice == 3:
         course_name = input("Entrez le nom du cours à ajouter: ")
         teacher_name = input("Entrez le nom de l'enseignant: ")
         courses[course_name] = teacher_name
-
 
     elif choice == 4:
         break
